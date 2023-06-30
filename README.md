@@ -54,3 +54,8 @@
 ![image](https://github.com/wonhee3472/Console_App_CSV_Parser/assets/56327729/b0703914-7a1e-4733-b53f-0592c11e9dc4)
 
 
+### Additional thoughts
+Not sure how to do unit test yet, but I thought it'd be good to do something like the followings:
+- Divide the `employee.csv` file into several sample csv files;
+- Add test data into each of them;
+- Verify if the app still outputs the expected values

@@ -48,9 +48,5 @@ namespace CSVDemo
 
         [CsvColumn(Name = "Exit Date")]
         public string ExitDate { get; set; }
-        
-
-
-
     }
 }

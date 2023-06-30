@@ -39,17 +39,14 @@ namespace CSVDemo
             // if 'departmentCounts' doesn't contain a key (in this case, the name of the department),
             // then its value is 1 (adding 1 as the first count)
             // next time the loop encounters the same department name, the count increments by 1
+            
+            // Using the ternary operator '? :' to make the code more concise
+            // Also, I think it'd be great to include another conditional statement to handle duplicate employee rows
             foreach (var employee in employees)
             {
-                if (!departmentCounts.ContainsKey(employee.Department))
-                {
-                    departmentCounts[employee.Department] = 1;
-                }
-                else
-                {
-                    departmentCounts[employee.Department]++;
-                }
+                departmentCounts[employee.Department] = !departmentCounts.ContainsKey(employee.Department) ? 1 : departmentCounts[employee.Department] + 1;
             }
+
 
             // After the first loop is finished, another loop starts:
             // it iterates over each 'department' and prints out its key and value
